@@ -6,6 +6,43 @@
         <title>Danica Louisse Talusik | Web Portfolio</title>
 
         <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 15px 20px;
+                background: white;
+                border-bottom: 1px solid #ddd;
+                z-index: 100;
+            }
+
+            .burger-menu {
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            main {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 100px 20px 40px;
+            }
+
             .top-section {
                 display: flex;
                 flex-direction: column;
@@ -34,17 +71,14 @@
             }
 
             .intro-section {
-                margin-top: 40px;
+                margin-top: 30px;
                 max-width: 600px;
                 line-height: 1.6;
                 text-align: justify;
-                margin-left: auto;
-                margin-right: auto;
                 padding: 0 10px;
             }
 
             footer {
-                margin-top: 60px;
                 text-align: center;
                 font-size: 0.9rem;
                 color: #555;
@@ -56,27 +90,25 @@
 
     <body>
 
-        <div class="top-section">
+        <nav class="navbar">
             <div class="burger-menu">☰</div>
+        </nav>
 
-            <div class="main-content">
-                <div class="profile-container">
-                    <img src="Self Portrait/Profile-Picture.jpg" 
-                        alt="Profile Picture" 
-                        class="profile-pic">
-
-                    <h1 class="owner-name">Danica Louisse Talusik</h1>
-                </div>
+        <main>
+            <div class="profile-container">
+                <img src="portrait/Profile-Picture.jpg" 
+                    alt="Profile Picture" 
+                    class="profile-pic">
+                <h1 class="owner-name">Danica Louisse Talusik</h1>
             </div>
-    </div>
-
-        <div class="intro-section">
-            <p>
-                I am a BSIT student currently studying Web Systems and Technologies, with a growing interest in 
-                combining creativity with logic to create designs that are both functional and visually appealing.
-            </p>
-        </div>
-
+            <div class="intro-section">
+                <p>
+                    I am a BSIT student currently studying Web Systems and Technologies, with a growing interest in 
+                    combining creativity with logic to create designs that are both functional and visually appealing.
+                </p>
+            </div>
+        </main>
+        
         <footer>
             <p>© 2026 Danica Louisse Talusik. All rights reserved.</p>
         </footer>
