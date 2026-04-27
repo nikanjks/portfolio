@@ -132,6 +132,36 @@ main {
     padding: 0 10px;
 }
 
+/*about me page*/
+
+.about-simple {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-section {
+    margin-bottom: 2rem;
+}
+
+.about-section-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 0.5rem;
+}
+
+.about-section {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.about-section:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+}
+
 /*navbar*/
 
 .navbar {
