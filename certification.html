@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> lang="en">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.8/sweetalert2.min.css">
     </head>
 
     <body>
+
         <nav class="navbar">
             <div class="nav-left">Danica Louisse Talusik</div>
             <ul class="nav-links">
@@ -25,91 +27,98 @@
         </nav>
 
         <main>
-            <div> class="page-hero">
-                <div> class="cert-card"
-                    data-img="images/certs/C-Essentials-1-Certificate.jpg"
-                    data-title="C Essentials 1">
-                    <div> class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
-                        <img> src="images/certs/C-Essentials-1-Certificate.jpg" alt="C Essentials"
+            <div class="container">
 
-                        <div> class="cert-zoom-hint"><span>View full</span></div>
-                    </div>
-                    <div> class="cert-footer">
-                        <div>
-                            <div> class="cert-label">C Essentials 1</div>
-                            <div> class="cert-issuer">Cisco Networking Academy</div>
-                        </div>
-                        <a> href="link_here" target="_blank" class="cert-verify">Verify</a>
-                    </div>
+                <div class="page-hero">
+                    <p class="section-label">Credentials</p>
+                    <h1 class="section-title">My <span>Certifications</span></h1>
+                    <div class="title-underline"></div>
                 </div>
 
-                <div> class="cert-card"
-                    data-img="images/certs/C-Programming-1-Certificate.jpg"
-                    data-title="C Programming 1">
-                    <div> class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
-                        <img> src="images/certs/C-Programming-1-Certificate.jpg" alt="C Programming"
+                <div class="cert-grid">
 
-                        <div> class="cert-zoom-hint"><span>View full</span></div>
-                    </div>
-                    <div> class="cert-footer">
-                        <div>
-                            <div> class="cert-label">C Programming 1</div>
-                            <div> class="cert-issuer">CODECHUM</div>
+                    <div class="cert-card"
+                        data-img="images/certs/C-Essentials-1-Certificate.jpg"
+                        data-title="C Essentials 1">
+                        <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
+                            <img src="images/certs/C-Essentials-1-Certificate.jpg" alt="C Essentials 1">
+                            <div class="cert-zoom-hint"><span>View full</span></div>
                         </div>
-                        <a> href="link_here" target="_blank" class="cert-verify">Verify</a>
+                        <div class="cert-footer">
+                            <div>
+                                <div class="cert-label">C Essentials 1</div>
+                                <div class="cert-issuer">Cisco NetAcad</div>
+                            </div>
+                            <a href="url_here" target="_blank" class="cert-verify">Verify</a>
+                        </div>
                     </div>
+
+                    <div class="cert-card"
+                        data-img="images/certs/C-Programming-1-Certificate.jpg"
+                        data-title="C Programming 1">
+                        <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
+                            <img src="images/certs/C-Programming-1-Certificate.jpg" alt="C Programming 1">
+                            <div class="cert-zoom-hint"><span>View full</span></div>
+                        </div>
+                        <div class="cert-footer">
+                            <div>
+                                <div class="cert-label">C Programming 1</div>
+                                <div class="cert-issuer">Cisco NetAcad</div>
+                            </div>
+                            <a href="url_here" target="_blank" class="cert-verify">Verify</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card"
+                        data-img="images/certs/Microsoft-Office-Specialist-Certificate.jpg"
+                        data-title="Microsoft Office Specialist">
+                        <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
+                            <img src="images/certs/Microsoft-Office-Specialist-Certificate.jpg" alt="Microsoft Office Specialist">
+                            <div class="cert-zoom-hint"><span>View full</span></div>
+                        </div>
+                        <div class="cert-footer">
+                            <div>
+                                <div class="cert-label">Microsoft Office Specialist</div>
+                                <div class="cert-issuer">Microsoft</div>
+                            </div>
+                            <a href="url_here" target="_blank" class="cert-verify">Verify</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card"
+                        data-img="images/certs/Networking-Basics-Certificate.jpg"
+                        data-title="Networking Basics">
+                        <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
+                            <img src="images/certs/Networking-Basics-Certificate.jpg" alt="Networking Basics">
+                            <div class="cert-zoom-hint"><span>View full</span></div>
+                        </div>
+                        <div class="cert-footer">
+                            <div>
+                                <div class="cert-label">Networking Basics</div>
+                                <div class="cert-issuer">Cisco NetAcad</div>
+                            </div>
+                            <a href="url_here" target="_blank" class="cert-verify">Verify</a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card"
+                        data-img="images/certs/Software-Engineering-Certificate.jpg"
+                        data-title="Software Engineering">
+                        <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
+                            <img src="images/certs/Software-Engineering-Certificate.jpg" alt="Software Engineering">
+                            <div class="cert-zoom-hint"><span>View full</span></div>
+                        </div>
+                        <div class="cert-footer">
+                            <div>
+                                <div class="cert-label">Software Engineering</div>
+                                <div class="cert-issuer">SailorAcad</div>
+                            </div>
+                            <a href="url_here" target="_blank" class="cert-verify">Verify</a>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div> class="cert-card"
-                    data-img="images/certs/Microsoft-Office-Specialist-Certificate.jpg"
-                    data-title="Microsoft Office Specialist">
-                    <div> class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
-                        <img> src="images/certs/Microsoft-Office-Specialist-Certificate.jpg" alt="Microsoft Office Specialist"
-
-                        <div> class="cert-zoom-hint"><span>View full</span></div>
-                    </div>
-                    <div> class="cert-footer">
-                        <div>
-                            <div> class="cert-label">Microsoft Office Specialist</div>
-                            <div> class="cert-issuer">Certiport</div>
-                        </div>
-                        <a> href="link_here" target="_blank" class="cert-verify">Verify</a>
-                    </div>
-                </div>
-
-                <div> class="cert-card"
-                    data-img="images/certs/Networking-Basics-Certificate.jpg"
-                    data-title="Networking Basics">
-                    <div> class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
-                        <img> src="images/certs/Networking-Basics-Certificate.jpg" alt="Networking Basics"
-
-                        <div> class="cert-zoom-hint"><span>View full</span></div>
-                    </div>
-                    <div> class="cert-footer">
-                        <div>
-                            <div> class="cert-label">Networking Basics</div>
-                            <div> class="cert-issuer">Cisco Networking Academy</div>
-                        </div>
-                        <a> href="link_here" target="_blank" class="cert-verify">Verify</a>
-                    </div>
-                </div>
-
-                <div> class="cert-card"
-                    data-img="images/certs/Software-Engineering-Certificate.jpg"
-                    data-title="Software Engineering">
-                    <div> class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
-                        <img> src="images/certs/Software-Engineering-Certificate.jpg" alt="C Essentials"
-
-                        <div> class="cert-zoom-hint"><span>View full</span></div>
-                    </div>
-                    <div> class="cert-footer">
-                        <div>
-                            <div> class="cert-label">Software Engineering</div>
-                            <div> class="cert-issuer">Sailor Univerity</div>
-                        </div>
-                        <a> href="link_here" target="_blank" class="cert-verify">Verify</a>
-                    </div>
-                </div>
             </div>
         </main>
 
