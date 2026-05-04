@@ -3,16 +3,16 @@
 /*css variables*/
 
 :root {
-    --bg:         ;
-    --bg2:        ;
-    --bg3:        ;
-    --accent:     ;
-    --accent2:    ;
-    --text:       ;
-    --secondary:  ;
-    --muted:      ;
-    --border:     ;
-    --border2:    ;
+    --bg:         #2a1220;
+    --bg2:        #3d1a2e;
+    --bg3:        #582c4d;
+    --accent:     #a26769;
+    --accent2:    #d5b9b2;
+    --text:       #ece2d0;
+    --secondary:  #d5b9b2;
+    --muted:      #bf5aaf;
+    --border:     rgba(162, 103, 105, 0.18);
+    --border2:    rgba(162, 103, 105, 0.45);
     --nav-h:      64px;
     --radius:     12px;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,9 +48,9 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background-image:
-        linear-gradient(rgba(58, 111, 247, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(58, 111, 247, 0.03) 1px, transparent 1px);
+    background-image: 
+        linear-gradient(rgba(162, 103. 105, 0.04) 1px transparent 1px), 
+        linear-gradient(90deg, rgba(162, 103, 105, 0.04) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
     z-index: 0;
@@ -97,6 +97,94 @@ main {
     padding-top: calc(var(--nav-h) + 3rem);
     padding-bottom: 5rem;
 }
+
+/*navbar*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-h);
+    z-index: 1000;
+    background: rgba(42, 18, 32, 0.88);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.nav-brand:hover {
+    color: var(--accent2);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.nav-links a {
+    display: block;
+    padding: 0.4rem 0.85rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--muted);
+    border-radius: 6px;
+    transition: color var(--transition), background var(--transition);
+    letter-spacing: 0.02em;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--secondary);
+    background: rgba(162, 103, 105, 0.12);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: 1px solid var(--border2);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+    transition: background var(--transition), border-color var(--transition);
+}
+
+.nav-toggle:hover {
+    background: rgba(162, 103, 105, 0.12);
+    border-color: var(--accent);
+}
+
+.nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--accent2);
+    border-radius: 2px;
+    transition: all var(--transition);
+}
+
 /*home page*/
 
 main {
@@ -236,57 +324,6 @@ main {
     font-weight: 600;
     color: var(--text);
     text-align: center;
-}
-
-/*navbar*/
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--nav-h);
-    z-index: 1000;
-    background: rgba(10, 26, 47, 0.85);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    padding: 0 2rem;
-    justify-content: space-between;
-}
-
-.nav-left {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--text);
-    letter-spacing: -0.02em;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-}
-
-.nav-links a {
-    display: block;
-    padding: 0.4rem 0.85rem;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--muted);
-    border-radius: 6px;
-    transition: color var(--transition), background var(--transition);
-    letter-spacing: 0.02em;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--secondary);
-    background: rgba(58, 111, 247, 0.1);
 }
 
 /*shared components*/
