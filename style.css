@@ -3,16 +3,16 @@
 /*css variables*/
 
 :root {
-    --bg:         #0A1A2F;
-    --bg2:        #0f2240;
-    --bg3:        #132a4e;
-    --accent:     #3A6FF7;
-    --accent2:    #5a8aff;
-    --text:       #EAEAEA;
-    --secondary:  #A5C9FF;
-    --muted:      #6a8fb5;
-    --border:     rgba(165, 201, 255, 0.12);
-    --border2:    rgba(58, 111, 247, 0.3);
+    --bg:         ;
+    --bg2:        ;
+    --bg3:        ;
+    --accent:     ;
+    --accent2:    ;
+    --text:       ;
+    --secondary:  ;
+    --muted:      ;
+    --border:     ;
+    --border2:    ;
     --nav-h:      64px;
     --radius:     12px;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -424,7 +424,7 @@ footer span {
 
 /*responsive breakpoints*/
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
     :root {
         --nav-h: 60px;
     }
@@ -448,7 +448,7 @@ footer span {
     }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 321px) {
     .navbar {
         padding: 0 1rem;
     }

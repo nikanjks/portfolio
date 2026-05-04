@@ -16,7 +16,7 @@
     <body>
 
         <nav class="navbar">
-            <div class="nav-left">Danica Louisse Talusik</div>
+            <a href="index.html" class="nav-brand">Danica Louisse Talusik</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -24,7 +24,21 @@
                 <li><a href="certification.html">Certifications</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+
+        <div class="nav-mobile-menu" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="stack.html">Stack</a>
+            <a href="certification.html">Certifications</a>
+            <a href="contact.html">Contact</a>
+        </div>
 
         <main>
             <div class="container">
@@ -33,76 +47,79 @@
                     <p class="section-label">Credentials</p>
                     <h1 class="section-title">My <span>Certifications</span></h1>
                     <div class="title-underline"></div>
+
+                    <div class="cert-grid">
+                        <div class="cert-card"
+                            data-img="images/certs/Microsoft-Office-Specialist-Certificate.jpg"
+                            data-title="Microsoft Office Specialist">
+                            <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
+                                <img src="https://github.com/nikanjks/portfolio/blob/master/certifications/Microsoft-Office-Specialist-Certificate-Danica-Louisse-Talusik.png?raw=true" alt="Microsoft Office Specialist">
+                                <div class="cert-zoom-hint"><span>View full</span></div>
+                            </div>
+                            <div class="cert-footer">
+                                <div>
+                                    <div class="cert-label">Microsoft Office Specialist</div>
+                                    <div class="cert-issuer">Microsoft</div>
+                                </div>
+                                <a href="https://www.certiport.com/portal/pages/credentialverification.aspx" target="_blank" class="cert-verify">Verify</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="cert-grid">
+                <div class="page-hero">
+                    <p class="section-label">Credentials</p>
+                    <h1 class="section-title">My <span>Certificate of Completion</span></h1>
+                    <div class="title-underline"></div>
 
-                    <div class="cert-card"
-                        data-img="images/certs/C-Essentials-1-Certificate.jpg"
-                        data-title="C Essentials 1">
-                        <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
-                            <img src="https://github.com/nikanjks/portfolio/blob/master/certifications/C-Essentials-1-Certificate-Danica-Louisse-Talusik.png?raw=true" alt="C Essentials 1">
-                            <div class="cert-zoom-hint"><span>View full</span></div>
-                        </div>
-                        <div class="cert-footer">
-                            <div>
-                                <div class="cert-label">C Essentials 1</div>
-                                <div class="cert-issuer">Cisco NetAcad</div>
+                    <div class="cert-grid">
+                        <div class="cert-card"
+                            data-img="images/certs/C-Essentials-1-Certificate.jpg"
+                            data-title="C Essentials 1">
+                            <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
+                                <img src="https://github.com/nikanjks/portfolio/blob/master/certifications/C-Essentials-1-Certificate-Danica-Louisse-Talusik.png?raw=true" alt="C Essentials 1">
+                                <div class="cert-zoom-hint"><span>View full</span></div>
                             </div>
-                            <a href="url_here" target="_blank" class="cert-verify">Verify</a>
+                            <div class="cert-footer">
+                                <div>
+                                    <div class="cert-label">C Essentials 1</div>
+                                    <div class="cert-issuer">Cisco NetAcad</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-card"
+                            data-img="images/certs/Networking-Basics-Certificate.jpg"
+                            data-title="Networking Basics">
+                            <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
+                                <img src="https://github.com/nikanjks/portfolio/blob/master/certifications/Networking-Basics-Certificate-Danica-Louisse-Talusik.png?raw=true" alt="Networking Basics">
+                                <div class="cert-zoom-hint"><span>View full</span></div>
+                            </div>
+                            <div class="cert-footer">
+                                <div>
+                                    <div class="cert-label">Networking Basics</div>
+                                    <div class="cert-issuer">Cisco NetAcad</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-card"
+                            data-img="images/certs/Software-Engineering-Certificate.jpg"
+                            data-title="Software Engineering">
+                            <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
+                                <img src="https://github.com/nikanjks/portfolio/blob/master/certifications/Software-Engineering-Certificate-Danica-Louisse-Talusik.png?raw=true" alt="Software Engineering">
+                                <div class="cert-zoom-hint"><span>View full</span></div>
+                            </div>
+                            <div class="cert-footer">
+                                <div>
+                                    <div class="cert-label">Software Engineering</div>
+                                    <div class="cert-issuer">SaylorAcad</div>
+                                </div>
+                                <a href="https://learn.saylor.org/admin/tool/certificate/index.php" target="_blank" class="cert-verify">Verify</a>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="cert-card"
-                        data-img="images/certs/Microsoft-Office-Specialist-Certificate.jpg"
-                        data-title="Microsoft Office Specialist">
-                        <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
-                            <img src="https://github.com/nikanjks/portfolio/blob/master/certifications/Microsoft-Office-Specialist-Certificate-Danica-Louisse-Talusik.png?raw=true" alt="Microsoft Office Specialist">
-                            <div class="cert-zoom-hint"><span>View full</span></div>
-                        </div>
-                        <div class="cert-footer">
-                            <div>
-                                <div class="cert-label">Microsoft Office Specialist</div>
-                                <div class="cert-issuer">Microsoft</div>
-                            </div>
-                            <a href="url_here" target="_blank" class="cert-verify">Verify</a>
-                        </div>
-                    </div>
-
-                    <div class="cert-card"
-                        data-img="images/certs/Networking-Basics-Certificate.jpg"
-                        data-title="Networking Basics">
-                        <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
-                            <img src="https://github.com/nikanjks/portfolio/blob/master/certifications/Networking-Basics-Certificate-Danica-Louisse-Talusik.png?raw=true" alt="Networking Basics">
-                            <div class="cert-zoom-hint"><span>View full</span></div>
-                        </div>
-                        <div class="cert-footer">
-                            <div>
-                                <div class="cert-label">Networking Basics</div>
-                                <div class="cert-issuer">Cisco NetAcad</div>
-                            </div>
-                            <a href="url_here" target="_blank" class="cert-verify">Verify</a>
-                        </div>
-                    </div>
-
-                    <div class="cert-card"
-                        data-img="images/certs/Software-Engineering-Certificate.jpg"
-                        data-title="Software Engineering">
-                        <div class="cert-img-wrap" onclick="openLightbox(this.parentElement)">
-                            <img src="https://github.com/nikanjks/portfolio/blob/master/certifications/Software-Engineering-Certificate-Danica-Louisse-Talusik.png?raw=true" alt="Software Engineering">
-                            <div class="cert-zoom-hint"><span>View full</span></div>
-                        </div>
-                        <div class="cert-footer">
-                            <div>
-                                <div class="cert-label">Software Engineering</div>
-                                <div class="cert-issuer">SailorAcad</div>
-                            </div>
-                            <a href="url_here" target="_blank" class="cert-verify">Verify</a>
-                        </div>
-                    </div>
-
                 </div>
-
             </div>
         </main>
 
