@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Danica Louisse Talusik | Portfolio</title>
+        <title>Danica Louisse Talusik | Contact</title>
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +13,7 @@
         <!-- Bulma -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.4/css/bulma.min.css" rel="stylesheet">
 
-        <!-- Custome Styles -->
+        <!-- Custom Styles -->
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -38,45 +39,51 @@
         <!-- Mobile Menu -->
         <div class="nav-mobile-menu" id="mobileMenu">
             <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
+            <a href="about.html">About</a>
             <a href="stack.html">Stack</a>
             <a href="certification.html">Certifications</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="active">Contact</a>
         </div>
 
         <main>
             <div class="container">
                 <div class="contact-wrap">
 
-                    <div class="page-hero">
+                    <div class="page-hero" id="pageHero">
                         <p class="section-label">Let's connect</p>
                         <h1 class="section-title">Get in <span>Touch</span></h1>
                         <div class="title-underline"></div>
                     </div>
 
-                    <div class="contact-cards">
+                    <div class="columns contact-columns" id="contactCols">
 
-                        <a class="contact-card"
-                            href="https://www.linkedin.com/in/danica-louisse-talusik-9481592ab/"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <div class="contact-card-icon icon-linkedin">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.contact/linkedin-rounded-svgrepo-com.svg" alt="LinkedIn">
-                            </div>
-                            <div class="contact-card-name">LinkedIn</div>
-                            <div class="contact-card-handle">danica-louisse-talusik</div>
-                        </a>
+                        <div class="column is-narrow">
+                            <a class="contact-card"
+                                href="https://www.linkedin.com/in/danica-louisse-talusik-9481592ab/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <div class="contact-card-icon icon-linkedin">
+                                    <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.contact/linkedin-rounded-svgrepo-com.svg" alt="LinkedIn">
+                                </div>
+                                <div>
+                                    <div class="contact-card-name">LinkedIn</div>
+                                </div>
+                            </a>
+                        </div>
 
-                        <a class="contact-card"
-                            href="https://github.com/nikanjks"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <div class="contact-card-icon icon-github">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.contact/github-142-svgrepo-com.svg" alt="GitHub">
-                            </div>
-                            <div class="contact-card-name">GitHub</div>
-                            <div class="contact-card-handle">@nikanjks</div>
-                        </a>
+                        <div class="column is-narrow">
+                            <a class="contact-card"
+                                href="https://github.com/nikanjks"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <div class="contact-card-icon icon-github">
+                                    <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.contact/github-142-svgrepo-com.svg" alt="GitHub">
+                                </div>
+                                <div>
+                                    <div class="contact-card-name">GitHub</div>
+                                </div>
+                            </a>
+                        </div>
 
                     </div>
 
@@ -88,5 +95,51 @@
             <p>© 2026 Danica Louisse Talusik. All rights reserved.</p>
         </footer>
 
+        <!-- Anime.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+
+        <script>
+            //<!-- Burger -->
+            const navToggle  = document.getElementById('navToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('open');
+                    mobileMenu.classList.remove('open');
+                });
+            });
+
+            anime({
+                targets: '#pageHero',
+                opacity: [0, 1],
+                translateY: [30, 0],
+                duration: 700,
+                easing: 'easeOutExpo'
+            });
+
+            anime({
+                targets: '#contactCols .column:nth-child(1) .contact-card',
+                opacity: [0, 1],
+                translateX: [-40, 0],
+                duration: 700,
+                easing: 'easeOutExpo',
+                delay: 350
+            });
+
+            anime({
+                targets: '#contactCols .column:nth-child(2) .contact-card',
+                opacity: [0, 1],
+                translateX: [40, 0],
+                duration: 700,
+                easing: 'easeOutExpo',
+                delay: 500
+            });
+        </script>
     </body>
 </html>

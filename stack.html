@@ -39,8 +39,8 @@
         <!-- Mobile Menu -->
         <div class="nav-mobile-menu" id="mobileMenu">
             <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="stack.html">Stack</a>
+            <a href="about.html">About</a>
+            <a href="stack.html" class="active">Stack</a>
             <a href="certification.html">Certifications</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -88,16 +88,23 @@
 
                         <div class="logo-card">
                             <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.programming-language/mysql-svgrepo-com.svg" alt="SQL">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.programming-language/mysql-svgrepo-com.svg" alt="MySQL">
                             </div>
                             <span class="logo-name">MySQL</span>
                         </div>
 
                         <div class="logo-card">
                             <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.programming-language/html-5-svgrepo-com.svg" alt="SQL">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.programming-language/html-5-svgrepo-com.svg" alt="HTML">
                             </div>
                             <span class="logo-name">HTML</span>
+                        </div>
+
+                        <div class="logo-card">
+                            <div class="logo-img-wrap">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.programming-language/html-5-svgrepo-com.svg" alt="CSS">
+                            </div>
+                            <span class="logo-name">CSS</span>
                         </div>
 
                     </div>
@@ -130,16 +137,23 @@
 
                         <div class="logo-card">
                             <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/icons8-apache-netbeans.svg" alt="Maven">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/icons8-apache-netbeans.svg" alt="Apache Netbeans">
                             </div>
                             <span class="logo-name">Apache Netbeans</span>
                         </div>
 
                         <div class="logo-card">
                             <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/kotlin-svgrepo-com.svg" alt="Maven">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/kotlin-svgrepo-com.svg" alt="Kotlin">
                             </div>
                             <span class="logo-name">Kotlin</span>
+                        </div>
+
+                        <div class="logo-card">
+                            <div class="logo-img-wrap">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/kotlin-svgrepo-com.svg" alt="GitHub">
+                            </div>
+                            <span class="logo-name">GitHub</span>
                         </div>
 
                     </div>
@@ -152,5 +166,53 @@
             <p>© 2026 Danica Louisse Talusik. All rights reserved.</p>
         </footer>
 
+        <!-- Anime.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+
+        <script>
+            //<!-- Burger -->
+            const navToggle  = document.getElementById('navToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('open');
+                mobileMenu.classList.toggle('open');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('open');
+                    mobileMenu.classList.remove('open');
+                });
+            });
+
+            anime({
+                targets: '#pageHero',
+                opacity: [0, 1],
+                translateY: [30, 0],
+                duration: 700,
+                easing: 'easeOutExpo'
+            });
+
+            anime({
+                targets: '#langGrid .logo-card',
+                opacity: [0, 1],
+                translateY: [28, 0],
+                scale: [0.92, 1],
+                duration: 600,
+                easing: 'easeOutExpo',
+                delay: anime.stagger(80, { start: 300, from: 'first' })
+            });
+
+            anime({
+                targets: '#toolGrid .logo-card',
+                opacity: [0, 1],
+                translateY: [28, 0],
+                scale: [0.92, 1],
+                duration: 600,
+                easing: 'easeOutExpo',
+                delay: anime.stagger(80, { start: 700, from: 'first' })
+            });
+        </script>
     </body>
 </html>
