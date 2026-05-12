@@ -239,11 +239,11 @@ main {
 }
 
 .profile-pic {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--border2);
+    border: 3px solid var(--border2);
     margin: 0 auto;
 }
 
@@ -691,7 +691,7 @@ footer {
     border: 1px solid var(--border) !important;
     border-radius: var(--radius) !important;
     box-shadow: none !important;
-    max-width: 420px;
+    max-width: 500px;
     width: 100%;
     transition: border-color var(--transition), box-shadow var(--transition);
 }
