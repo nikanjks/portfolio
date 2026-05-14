@@ -60,6 +60,7 @@
                     <h1 class="section-title">My <span>Certifications</span></h1>
                     <div class="title-underline"></div>
 
+                    <!-- Bulma card with card-image for certification -->
                     <div class="cert-grid cert-grid-single">
                         <div class="card bulma-cert-card"
                             data-img="https://github.com/nikanjks/portfolio/blob/master/certifications/Microsoft-Office-Specialist-Certificate-Danica-Louisse-Talusik.png?raw=true"
@@ -88,6 +89,7 @@
                     <h1 class="section-title">My <span>Certificates of Completion</span></h1>
                     <div class="title-underline"></div>
 
+                    <!-- Bulma card with card-image for each completion cert -->
                     <div class="cert-grid" id="completionGrid">
 
                         <div class="card bulma-cert-card"
@@ -145,6 +147,25 @@
                             </div>
                         </div>
 
+                        <div class="card bulma-cert-card"
+                            data-img="https://github.com/nikanjks/portfolio/blob/master/certifications/Introduction-to-Modern-Database-Systems-Certificate-Danica-Louisse-Talusik.png?raw=true"
+                            data-title="Introduction to Modern Database Systems">
+                            <div class="card-image" onclick="openLightbox(this.parentElement)">
+                                <figure class="image is-4by3">
+                                    <img src="https://github.com/nikanjks/portfolio/blob/master/certifications/Introduction-to-Modern-Database-Systems-Certificate-Danica-Louisse-Talusik.png?raw=true"
+                                        alt="Introduction to Modern Database Systems">
+                                </figure>
+                                <div class="cert-zoom-hint"><span>View full</span></div>
+                            </div>
+                            <div class="cert-footer">
+                                <div>
+                                    <div class="cert-label">Introduction to Modern Database Systems</div>
+                                    <div class="cert-issuer">SaylorAcad</div>
+                                </div>
+                                <a href="https://learn.saylor.org/admin/tool/certificate/index.php" target="_blank" class="cert-verify">Verify</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -159,7 +180,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
 
         <script>
-            //<!-- Burger -->
+            // ── Hamburger ─────────────────────────────────────────
             const navToggle  = document.getElementById('navToggle');
             const mobileMenu = document.getElementById('mobileMenu');
 
@@ -175,7 +196,7 @@
                 });
             });
 
-            //<!-- Lightbox -->
+            // ── Lightbox ──────────────────────────────────────────
             function openLightbox(card) {
                 const imgSrc   = card.getAttribute('data-img');
                 const imgTitle = card.getAttribute('data-title');
@@ -202,8 +223,9 @@
                 }
             });
 
+            // ── Anime.js: section headers stagger in ──────────────
             anime({
-                targets: ['#heroOne', '#heroTwo'],
+                targets: ['#heroOne', '#heroTwo', '#heroThree'],
                 opacity: [0, 1],
                 translateY: [30, 0],
                 duration: 700,
@@ -211,6 +233,7 @@
                 delay: anime.stagger(200)
             });
 
+            // ── Anime.js: cert cards stagger in ───────────────────
             anime({
                 targets: '#completionGrid .card',
                 opacity: [0, 1],
@@ -221,5 +244,6 @@
                 delay: anime.stagger(120, { start: 400, from: 'first' })
             });
         </script>
+
     </body>
 </html>

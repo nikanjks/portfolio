@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-/* CSS Variables */
-/* Palette: CEE5F2 · ACCBE1 · 7C98B3 · 637081 · 536B78 */
+/* ─── CSS Variables ──────────────────────────────────────────── */
+/* Palette: CEE5F2 · ACCBE1 · 7C98B3 · 637081 · 536B78          */
 :root {
     --bg:         #2e3f4a;
     --bg2:        #3c5260;
@@ -18,7 +18,7 @@
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Base Reset */
+/* ─── Base Reset ─────────────────────────────────────────────── */
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +42,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Subtle Grid Background */
+/* ─── Subtle Grid Background ─────────────────────────────────── */
 body::before {
     content: '';
     position: fixed;
@@ -77,7 +77,7 @@ img {
     display: block;
 }
 
-/* Layout */
+/* ─── Layout ─────────────────────────────────────────────────── */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -98,7 +98,7 @@ main {
     padding-right: 2rem;
 }
 
-/* Navbar */
+/* ─── Navbar ─────────────────────────────────────────────────── */
 .navbar {
     position: fixed;
     top: 0;
@@ -185,7 +185,7 @@ main {
     transition: all var(--transition);
 }
 
-/* Hamburger -> X animation */
+/* Hamburger → X animation */
 .nav-toggle.open span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
@@ -233,14 +233,14 @@ main {
     background: rgba(172, 203, 225, 0.10);
 }
 
-/* Home Page */
+/* ─── Home Page ──────────────────────────────────────────────── */
 .profile-container {
     text-align: center;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--border2);
@@ -263,7 +263,7 @@ main {
     color: var(--muted);
 }
 
-/* About Page */
+/* ─── About Page ─────────────────────────────────────────────── */
 .about-simple {
     max-width: 700px;
     margin: 0 auto;
@@ -290,7 +290,7 @@ main {
     padding-bottom: 1.5rem;
 }
 
-/* Bulma notification */
+/* Bulma .notification used on About page */
 .about-notification.notification {
     background: var(--bg2) !important;
     color: var(--muted) !important;
@@ -312,7 +312,7 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/* Tech Stack Page */
+/* ─── Tech Stack Page ────────────────────────────────────────── */
 .stack-section {
     margin-bottom: 3rem;
 }
@@ -328,6 +328,13 @@ main {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+}
+
+/* Hide section titles on mobile, use color strip instead */
+@media (max-width: 768px) {
+    .stack-section-title {
+        display: none;
+    }
 }
 
 .stack-section-title::after {
@@ -347,12 +354,87 @@ main {
     background: var(--bg2);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 1.25rem 1rem;
+    padding: 1.25rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
     transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Color coding strip at top of each card by type */
+.logo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+}
+
+/* Frontend */
+.logo-card.frontend::before {
+    background: #C96C4A;
+}
+
+/* Languages */
+.logo-card.language::before {
+    background: #C7A33C;
+}
+
+/* Databases */
+.logo-card.database::before {
+    background: #B58EDB;
+}
+
+/* Dev Tools */
+.logo-card.devtool::before {
+    background: #E8A7C8;
+}
+
+/* Stack legend */
+.stack-legend {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.stack-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+}
+
+.stack-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.stack-legend-dot.frontend {
+    background: #C96C4A;
+}
+
+.stack-legend-dot.language {
+    background: #C7A33C;
+}
+
+.stack-legend-dot.database {
+    background: #B58EDB;
+}
+
+.stack-legend-dot.devtool {
+    background: #E8A7C8;
 }
 
 .logo-card:hover {
@@ -387,11 +469,22 @@ main {
     text-align: center;
 }
 
-/* Certifications Page */
+/* ─── Certifications Page ────────────────────────────────────── */
 .cert-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    align-items: start;
+}
+
+.cert-grid .bulma-cert-card.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-grid .cert-footer {
+    margin-top: auto;
 }
 
 /* Single-cert section gets a narrower grid */
@@ -406,6 +499,8 @@ main {
     border-radius: var(--radius);
     overflow: hidden;
     transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .cert-card:hover {
@@ -465,6 +560,7 @@ main {
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
+    margin-top: auto;
 }
 
 .cert-label {
@@ -500,7 +596,7 @@ main {
     border-color: var(--accent2);
 }
 
-/* Lightbox */
+/* ─── Lightbox ───────────────────────────────────────────────── */
 .lightbox-overlay {
     display: none;
     position: fixed;
@@ -545,12 +641,12 @@ main {
     color: var(--text);
 }
 
-/* Contact Page */
+/* ─── Contact Page ───────────────────────────────────────────── */
 .contact-wrap {
     width: 100%;
 }
 
-/* Bulma columns */
+/* Bulma .columns used on Contact page */
 .contact-columns.columns {
     margin: 0 !important;
     flex-wrap: wrap;
@@ -623,7 +719,7 @@ main {
     margin-top: 0.1rem;
 }
 
-/* Shared Components */
+/* ─── Shared Components ──────────────────────────────────────── */
 .section-label {
     font-size: 0.75rem;
     font-weight: 600;
@@ -657,7 +753,7 @@ main {
     margin-bottom: 3.5rem;
 }
 
-/* Animations */
+/* ─── Animations ─────────────────────────────────────────────── */
 .fade-in {
     opacity: 0;
     transform: translateY(24px);
@@ -672,7 +768,7 @@ main {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Footer */
+/* ─── Footer ─────────────────────────────────────────────────── */
 footer {
     position: relative;
     z-index: 1;
@@ -684,7 +780,16 @@ footer {
 }
 
 
-/* Bulma Card Overrides */
+/* Stack color coding by category */
+.logo-card.lang {
+    border-left: 3px solid var(--accent);
+}
+
+.logo-card.tool {
+    border-left: 3px solid var(--accent2);
+}
+
+/* ─── Bulma Card Overrides ───────────────────────────────────── */
 /* Profile card on index.html */
 .profile-card.card {
     background: var(--bg2) !important;
@@ -702,7 +807,7 @@ footer {
 }
 
 .profile-card .card-content {
-    padding: 2rem !important;
+    padding: 2.5rem 2rem !important;
 }
 
 .profile-card .intro-section {
@@ -717,6 +822,9 @@ footer {
     box-shadow: none !important;
     overflow: hidden;
     transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100%;
 }
 
 .bulma-cert-card.card:hover {
@@ -759,7 +867,7 @@ footer {
 #contactCols .contact-card {
     opacity: 0;
 }
-/* Bulma Override */
+/* ─── Bulma Override ─────────────────────────────────────────── */
 html, body {
     background: var(--bg) !important;
     color: var(--text) !important;
@@ -767,7 +875,7 @@ html, body {
     font-size: 16px !important;
 }
 
-/* Responsive: Tablet (321px to 768px) */
+/* ─── Responsive: Tablet (321px to 768px) ────────────────────── */
 @media (max-width: 768px) {
     :root { --nav-h: 60px; }
 
@@ -780,17 +888,23 @@ html, body {
     .nav-brand  { display: block; }
 
     .logo-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
     }
 
     .cert-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
     .cert-grid.cert-grid-single {
         grid-template-columns: 1fr;
+    }
+
+    /* Stack: 2 cols on tablet too */
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
     }
 
     .contact-cards {
@@ -804,10 +918,21 @@ html, body {
     .contact-columns.columns {
         flex-direction: column;
         align-items: center;
+        gap: 0.85rem !important;
+    }
+
+    .contact-columns .column {
+        width: 100%;
+        width: 100%;
+        max-width: 260px;
+        padding: 0 !important;
+
+    .contact-columns .contact-card {
+        width: 100%;
     }
 }
 
-/* Responsive: Mobile (320px and below) */
+/* ─── Responsive: Mobile (320px and below) ───────────────────── */
 @media (max-width: 320px) {
     :root { --nav-h: 56px; }
 

@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Danica Louisse Talusik | Portfolio</title>
 
@@ -48,112 +48,142 @@
         <main>
             <div class="container">
 
-                <div class="page-hero">
+                <div class="page-hero" id="pageHero">
                     <p class="section-label">What I work with</p>
                     <h1 class="section-title">Tech <span>Stack</span></h1>
                     <div class="title-underline"></div>
                 </div>
 
+                <!-- Stack Legend -->
+                <div class="stack-legend">
+
+                    <div class="stack-legend-item">
+                        <span class="stack-legend-dot frontend"></span>
+                        Frontend
+                    </div>
+
+                    <div class="stack-legend-item">
+                        <span class="stack-legend-dot language"></span>
+                        Languages
+                    </div>
+
+                    <div class="stack-legend-item">
+                        <span class="stack-legend-dot database"></span>
+                        Databases
+                    </div>
+
+                    <div class="stack-legend-item">
+                        <span class="stack-legend-dot devtool"></span>
+                        Dev Tools
+                    </div>
+
+                </div>
+
+                <!-- Tech Stack -->
                 <div class="stack-section">
-                    <h2 class="stack-section-title">Programming Languages</h2>
-                    <div class="logo-grid">
 
-                        <div class="logo-card">
-                            <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/acf37ec45c1848ec4f06c507bc217c240b3929d7/logos/.programming-language/icons8-javascript.svg" alt="JavaScript">
-                            </div>
-                            <span class="logo-name">JavaScript</span>
-                        </div>
+                    <div class="logo-grid" id="stackGrid">
 
-                        <div class="logo-card">
-                            <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/acf37ec45c1848ec4f06c507bc217c240b3929d7/logos/.programming-language/icons8-python.svg" alt="Python">
-                            </div>
-                            <span class="logo-name">Python</span>
-                        </div>
-
-                        <div class="logo-card">
-                            <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/acf37ec45c1848ec4f06c507bc217c240b3929d7/logos/.programming-language/icons8-c-programming.svg" alt="C">
-                            </div>
-                            <span class="logo-name">C</span>
-                        </div>
-
-                        <div class="logo-card">
-                            <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/acf37ec45c1848ec4f06c507bc217c240b3929d7/logos/.programming-language/icons8-java.svg" alt="Java">
-                            </div>
-                            <span class="logo-name">Java</span>
-                        </div>
-
-                        <div class="logo-card">
-                            <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.programming-language/mysql-svgrepo-com.svg" alt="MySQL">
-                            </div>
-                            <span class="logo-name">MySQL</span>
-                        </div>
-
-                        <div class="logo-card">
+                        <!-- FRONTEND -->
+                        <div class="logo-card frontend">
                             <div class="logo-img-wrap">
                                 <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.programming-language/html-5-svgrepo-com.svg" alt="HTML">
                             </div>
                             <span class="logo-name">HTML</span>
                         </div>
 
-                        <div class="logo-card">
+                        <div class="logo-card frontend">
                             <div class="logo-img-wrap">
                                 <img src="https://raw.githubusercontent.com/nikanjks/portfolio/c96d4ec40a6c9baacc64f8ab3ee03aff052162ae/logos/.programming-language/css-3-svgrepo-com.svg" alt="CSS">
                             </div>
                             <span class="logo-name">CSS</span>
                         </div>
 
-                    </div>
-                </div>
-
-                <div class="stack-section">
-                    <h2 class="stack-section-title">Development Tools</h2>
-                    <div class="logo-grid">
-
-                        <div class="logo-card">
+                        <div class="logo-card frontend">
                             <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/icons8-visual-studio-code-2019.svg" alt="Visual Studio Code">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/acf37ec45c1848ec4f06c507bc217c240b3929d7/logos/.programming-language/icons8-javascript.svg" alt="JavaScript">
+                            </div>
+                            <span class="logo-name">JavaScript</span>
+                        </div>
+
+                        <!-- LANGUAGES -->
+                        <div class="logo-card language">
+                            <div class="logo-img-wrap">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/acf37ec45c1848ec4f06c507bc217c240b3929d7/logos/.programming-language/icons8-c-programming.svg" alt="C">
+                            </div>
+                            <span class="logo-name">C</span>
+                        </div>
+
+                        <div class="logo-card language">
+                            <div class="logo-img-wrap">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/acf37ec45c1848ec4f06c507bc217c240b3929d7/logos/.programming-language/icons8-java.svg" alt="Java">
+                            </div>
+                            <span class="logo-name">Java</span>
+                        </div>
+
+                        <div class="logo-card language">
+                            <div class="logo-img-wrap">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/acf37ec45c1848ec4f06c507bc217c240b3929d7/logos/.programming-language/icons8-python.svg" alt="Python">
+                            </div>
+                            <span class="logo-name">Python</span>
+                        </div>
+
+                        <!-- DATABASES -->
+                        <div class="logo-card database">
+                            <div class="logo-img-wrap">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.programming-language/mysql-svgrepo-com.svg" alt="MySQL">
+                            </div>
+                            <span class="logo-name">MySQL</span>
+                        </div>
+
+                        <div class="logo-card database">
+                            <div class="logo-img-wrap">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/c96d4ec40a6c9baacc64f8ab3ee03aff052162ae/logos/.programming-language/mongodb-svgrepo-com.svg" alt="MongoDB">
+                            </div>
+                            <span class="logo-name">MongoDB</span>
+                        </div>
+
+                        <!-- DEV TOOLS -->
+                        <div class="logo-card devtool">
+                            <div class="logo-img-wrap">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/icons8-visual-studio-code-2019.svg" alt="VS Code">
                             </div>
                             <span class="logo-name">VS Code</span>
                         </div>
 
-                        <div class="logo-card">
+                        <div class="logo-card devtool">
                             <div class="logo-img-wrap">
                                 <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/git-svgrepo-com.svg" alt="Git">
                             </div>
                             <span class="logo-name">Git</span>
                         </div>
 
-                        <div class="logo-card">
+                        <div class="logo-card devtool">
+                            <div class="logo-img-wrap">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/c96d4ec40a6c9baacc64f8ab3ee03aff052162ae/logos/.development-tools/github-142-svgrepo-com.svg" alt="GitHub">
+                            </div>
+                            <span class="logo-name">GitHub</span>
+                        </div>
+
+                        <div class="logo-card devtool">
                             <div class="logo-img-wrap">
                                 <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/maven-svgrepo-com.svg" alt="Maven">
                             </div>
                             <span class="logo-name">Maven</span>
                         </div>
 
-                        <div class="logo-card">
+                        <div class="logo-card devtool">
                             <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/icons8-apache-netbeans.svg" alt="Apache Netbeans">
+                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/icons8-apache-netbeans.svg" alt="Apache NetBeans">
                             </div>
-                            <span class="logo-name">Apache Netbeans</span>
+                            <span class="logo-name">NetBeans</span>
                         </div>
 
-                        <div class="logo-card">
+                        <div class="logo-card devtool">
                             <div class="logo-img-wrap">
                                 <img src="https://raw.githubusercontent.com/nikanjks/portfolio/43169c74bb1b3d1b9e88d3ec5cce2cfefb7650c6/logos/.development-tools/kotlin-svgrepo-com.svg" alt="Kotlin">
                             </div>
                             <span class="logo-name">Kotlin</span>
-                        </div>
-
-                        <div class="logo-card">
-                            <div class="logo-img-wrap">
-                                <img src="https://raw.githubusercontent.com/nikanjks/portfolio/c96d4ec40a6c9baacc64f8ab3ee03aff052162ae/logos/.development-tools/github-142-svgrepo-com.svg" alt="GitHub">
-                            </div>
-                            <span class="logo-name">GitHub</span>
                         </div>
 
                     </div>
