@@ -901,15 +901,17 @@ html, body {
         gap: 0.75rem;
     }
 
-    /* Certs: 1 column on tablet */
-    .cert-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .cert-grid,
+    .cert-grid.cert-grid-single {
+        grid-template-columns: 1fr !important;
+        justify-content: center;
     }
 
-    .cert-grid.cert-grid-single {
-        grid-template-columns: 1fr;
-        justify-content: center;
+    .cert-grid .card,
+    .bulma-cert-card.card {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
     }
 
     /* Contact: stack with gap */
