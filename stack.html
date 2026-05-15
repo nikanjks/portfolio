@@ -193,7 +193,7 @@
         </main>
 
         <footer>
-            <p>© 2026 Danica Louisse Talusik. All rights reserved.</p>
+            <p>Designed & developed by Danica Louisse Talusik.</p>
         </footer>
 
         <!-- Anime.js -->
@@ -225,23 +225,13 @@
             });
 
             anime({
-                targets: '#langGrid .logo-card',
+                targets: '#stackGrid .logo-card',
                 opacity: [0, 1],
                 translateY: [28, 0],
                 scale: [0.92, 1],
                 duration: 600,
                 easing: 'easeOutExpo',
                 delay: anime.stagger(80, { start: 300, from: 'first' })
-            });
-
-            anime({
-                targets: '#toolGrid .logo-card',
-                opacity: [0, 1],
-                translateY: [28, 0],
-                scale: [0.92, 1],
-                duration: 600,
-                easing: 'easeOutExpo',
-                delay: anime.stagger(80, { start: 700, from: 'first' })
             });
         </script>
     </body>

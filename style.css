@@ -330,13 +330,6 @@ main {
     gap: 0.75rem;
 }
 
-/* Hide section titles on mobile, use color strip instead */
-@media (max-width: 768px) {
-    .stack-section-title {
-        display: none;
-    }
-}
-
 .stack-section-title::after {
     content: '';
     flex: 1;
@@ -374,38 +367,38 @@ main {
     height: 3px;
 }
 
-/* Frontend */
 .logo-card.frontend::before {
-    background: #C96C4A;
+    background: #d08b6d;
 }
 
-/* Languages */
 .logo-card.language::before {
-    background: #C7A33C;
+    background: #d6b85a;
 }
 
-/* Databases */
 .logo-card.database::before {
-    background: #B58EDB;
+    background: #9a8fd1;
 }
 
-/* Dev Tools */
 .logo-card.devtool::before {
-    background: #E8A7C8;
+    background: #d79ab6;
 }
 
-/* Stack legend */
+/* ─── Stack Legend ───────────────────────────────────────────── */
 .stack-legend {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
     flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
 }
 
 .stack-legend-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 0.78rem;
@@ -421,20 +414,24 @@ main {
     flex-shrink: 0;
 }
 
+/* Frontend */
 .stack-legend-dot.frontend {
-    background: #C96C4A;
+    background: #d08b6d;
 }
 
+/* Languages */
 .stack-legend-dot.language {
-    background: #C7A33C;
+    background: #d6b85a;
 }
 
+/* Databases */
 .stack-legend-dot.database {
-    background: #B58EDB;
+    background: #9a8fd1;
 }
 
+/* Dev Tools */
 .stack-legend-dot.devtool {
-    background: #E8A7C8;
+    background: #d79ab6;
 }
 
 .logo-card:hover {
@@ -474,13 +471,13 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 .cert-grid .bulma-cert-card.card {
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .cert-grid .cert-footer {
@@ -561,6 +558,15 @@ main {
     justify-content: space-between;
     gap: 0.5rem;
     margin-top: auto;
+    min-height: 78px;
+}
+
+.cert-grid .card {
+    height: 100%;
+}
+
+.cert-footer {
+    min-height: 78px;
 }
 
 .cert-label {
@@ -644,15 +650,21 @@ main {
 /* ─── Contact Page ───────────────────────────────────────────── */
 .contact-wrap {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
 }
 
 /* Bulma .columns used on Contact page */
 .contact-columns.columns {
-    margin: 0 !important;
+    margin: 0 auto !important;
+    display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    align-items: stretch;
     gap: 1.25rem;
+    width: 100%;
 }
 
 .contact-columns .column {
@@ -676,8 +688,11 @@ main {
     align-items: center;
     gap: 0.85rem;
     text-decoration: none;
-    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-    width: 200px;
+    transition: border-color var(--transition),
+                transform var(--transition),
+                box-shadow var(--transition);
+    width: 240px;
+    max-width: 100%;
 }
 
 .contact-card:hover {
@@ -779,16 +794,6 @@ footer {
     border-top: 1px solid var(--border);
 }
 
-
-/* Stack color coding by category */
-.logo-card.lang {
-    border-left: 3px solid var(--accent);
-}
-
-.logo-card.tool {
-    border-left: 3px solid var(--accent2);
-}
-
 /* ─── Bulma Card Overrides ───────────────────────────────────── */
 /* Profile card on index.html */
 .profile-card.card {
@@ -887,11 +892,13 @@ html, body {
     .nav-toggle { display: flex; }
     .nav-brand  { display: block; }
 
+    /* 3 columns on tablet */
     .logo-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 0.75rem;
     }
 
+    /* Certs: 1 column on tablet */
     .cert-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -901,12 +908,7 @@ html, body {
         grid-template-columns: 1fr;
     }
 
-    /* Stack: 2 cols on tablet too */
-    .logo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
-    }
-
+    /* Contact: stack with gap */
     .contact-cards {
         flex-direction: column;
     }
@@ -916,16 +918,16 @@ html, body {
     }
 
     .contact-columns.columns {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.85rem !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
     }
 
     .contact-columns .column {
-        width: 100%;
-        width: 100%;
-        max-width: 260px;
+        width: 100% !important;
+        max-width: 260px !important;
         padding: 0 !important;
+    }
 
     .contact-columns .contact-card {
         width: 100%;
@@ -933,7 +935,7 @@ html, body {
 }
 
 /* ─── Responsive: Mobile (320px and below) ───────────────────── */
-@media (max-width: 320px) {
+@media (max-width: 480px) {
     :root { --nav-h: 56px; }
 
     .navbar { padding: 0 1rem; }
@@ -944,6 +946,7 @@ html, body {
 
     .nav-brand { display: none; }
 
+    /* 2 columns on mobile */
     .logo-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
@@ -957,5 +960,21 @@ html, body {
     .cert-grid.cert-grid-single {
         grid-template-columns: 1fr;
         gap: 0.75rem;
+    }
+
+    .contact-columns.columns {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+
+    .contact-columns .column {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 0 !important;
+    }
+
+    .contact-columns .contact-card {
+        width: 100%;
     }
 }
